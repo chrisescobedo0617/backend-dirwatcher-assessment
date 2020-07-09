@@ -7,7 +7,6 @@ import sys
 import os
 
 exit_flag = False
-polling_interval = 2.0
 file_dict = {}
 
 logger = logging.getLogger(__name__)
@@ -70,7 +69,7 @@ def create_parser():
     parser.add_argument(
         '-e', '--ext', default='.txt', help='Text file extension to watch e.g .txt, .log')
     parser.add_argument(
-        '-i', '--interval', help='Number of seconds between polling')
+        '-i', '--interval', default=2.0, help='Number of seconds between polling')
     return parser
 
 
